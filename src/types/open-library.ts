@@ -34,4 +34,19 @@ export interface EditionMetaData {
     identifier: string;
     "identifier-access": string;
   };
+  page_numbers?: {
+    pages: {
+      leafNum: number;
+      pageNumber: string;
+    }[];
+  };
+}
+
+export interface SearchResult {
+  ia: string;
+  text: string;
+  par: {
+    page: number;
+  }[];
+  link?: string;
 }
