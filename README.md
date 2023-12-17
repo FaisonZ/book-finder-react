@@ -10,8 +10,5 @@ Book Finder uses the following APIs provided by openlibrary.org:
 
 ---
 
-User Stories, maybe:
+I took a "Build it to throw away"-first approach with this project. [You can read about version 1 in this markdown file](./docs//version-1.md).
 
-* [ ] As a user, I can perform a search and view a list of books found by that search
-* [ ] As a user, I can select one or more books to search through
-* [ ] As a user, when I search through selected books, I can view a list of my found searches with deep links to each search result
