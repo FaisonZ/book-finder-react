@@ -1,0 +1,64 @@
+.book-search {
+  display: flex;
+  gap: 0.5rem;
+
+  > .book-finder {
+    flex: 1;
+  }
+
+  > .book-selection {
+    flex: 1;
+  }
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > .book-list-item {
+    position: relative;
+    margin: 0.5rem 0;
+    padding-bottom: 0.5rem;
+  }
+
+  > .book-list-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    margin: 0 5%;
+    width: 90%;
+    background-color: #777777;;
+  }
+}
+
+.book-selection {
+  > .title {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.book-list-item {
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    order: 1
+  }
+
+  > .description {
+    margin: 0;
+    flex: 1;
+  }
+
+  > .toggle {
+    max-height: 2rem;
+  }
+
+  > .toggle.-start {
+    order: 0;
+  }
+}

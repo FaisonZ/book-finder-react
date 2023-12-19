@@ -1,8 +1,17 @@
-import './App.css'
+import BookSearch from './components/BookSearch';
+import InBookSearch from './components/InBookSearch';
+import GlobalProvider from './contexts/providers/GlobalProvider';
+
+import './App.scss'
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <GlobalProvider>
+      <main className="book-search-app">
+        <BookSearch />
+        <InBookSearch />
+      </main>
+    </GlobalProvider>
   );
 };
 
