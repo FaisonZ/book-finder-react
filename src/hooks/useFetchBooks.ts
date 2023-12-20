@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import BookResultsContext, { BookResult } from "../contexts/BookResultsContext";
 import BooksContext from "../contexts/BooksContext";
-import { findBooks } from "../open-library/search";
+import { findBooks } from "../open-library/find-books";
 
 function useFetchBooks() {
   const [isFetching, setIsFetching] = useState(false);
@@ -13,10 +13,6 @@ function useFetchBooks() {
     setIsFetching(true);
 
     const books = await findBooks(query);
-
-    if (!books.length) {
-      return;
-    }
 
     setBooks((prev) => {
       const updatedBooks = [...prev];

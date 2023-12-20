@@ -1,0 +1,14 @@
+
+.book-list-item {
+  display: flex;
+  gap: 1rem;
+
+  > .description {
+    margin: 0;
+    flex: 1;
+  }
+
+  > .toggle {
+    max-height: 2rem;
+  }
+}
