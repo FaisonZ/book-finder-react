@@ -23,7 +23,7 @@ function BookFinder() {
           type="search"
           name="search"
           required
-          minLength={4}
+          minLength={3}
           disabled={isFetching}
         />
         <button type="submit" disabled={isFetching}>🔎</button>
