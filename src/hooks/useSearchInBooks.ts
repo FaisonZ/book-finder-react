@@ -55,6 +55,7 @@ function useSearchInBooks() {
 
               if (pageNumber >= 0) {
                 results[i].pageNumber = pageNumber
+                results[i].displayNumber = bookPages[pageNumber].pageNumber || undefined;
               }
             }
 

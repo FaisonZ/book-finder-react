@@ -4,6 +4,16 @@ import BooksContext, { Book } from "../contexts/BooksContext";
 function useGetBooks() {
   const {books} = useContext(BooksContext);
 
+  function getBookById(id: string) {
+    for (let i = 0; i < books.length; i++) {
+      if (books[i].id === id) {
+        return books[i];
+      }
+    }
+
+    return null;
+  }
+
   function getBooksByIds(ids: string[]) {
     const booksToReturn = [] as Book[];
 
@@ -31,6 +41,7 @@ function useGetBooks() {
   }
 
   return {
+    getBookById,
     getBooksByIds,
   }
 }

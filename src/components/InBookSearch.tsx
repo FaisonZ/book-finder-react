@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import useSearchInBooks from "../hooks/useSearchInBooks";
-import InBookResultsContext from "../contexts/InBookResultsContext";
+import SearchResults from "./SearchResults";
 
 function InBookSearch() {
   const { isSearching, searchInBooks } = useSearchInBooks();
-  const { results } = useContext(InBookResultsContext);
 
   const findInBooks = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,16 +23,7 @@ function InBookSearch() {
         />
         <button type="submit" disabled={isSearching}>🔎</button>
       </form>
-      {results.length ? (
-        <ul>
-          {results.map((results, idx) => (
-            <li key={`in-book-result-${idx}`}>
-              {results.text}<br />
-              {results.leafNumber}
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      <SearchResults />
     </div>
   )
 }
