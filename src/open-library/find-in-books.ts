@@ -49,8 +49,8 @@ export async function findInBooks(
     for (let j = 0; j < matches.length; j++) {
       inBookResults.push({
         bookId: inBookSearches[i].ia,
-        text: matches[i].text,
-        leafNumber: matches[i].par[0].page,
+        text: matches[j].text,
+        leafNumber: matches[j].par[0].page,
       });
     }
   }
