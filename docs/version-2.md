@@ -52,6 +52,15 @@ titles on search results. Perhaps I'll handle the leaf number to page number
 mapping when the search results are initially retrieved. Either way, it ain't
 gonna look pretty.
 
+## More Dealing with Deep Linkings
+
+Some times the leaf number minus 1 works if prefixed with an 'n'. Sometimes the
+index of the page that contains the leaf number that is found in the page
+numbers array works if prefixed with an 'n'. Sometimes using the page number
+corresponding to the leaf number works, but some times it doesn't. I need to
+dig into why, but I suspect it may have something to do with the confidence
+attribute found on all pages.
+
 ## Takeaways
 
 When I finish version 2, I will add my takeaways.
