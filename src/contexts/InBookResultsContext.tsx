@@ -4,6 +4,7 @@ export interface InBookResult {
   bookId: string;
   text: string;
   leafNumber: number;
+  pageNumber?: number;
 };
 
 const InBookResultsContext = createContext<{
